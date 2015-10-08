@@ -18,15 +18,20 @@
         android:id="@+id/currentText"
         android:layout_marginTop="50dp"
         android:layout_marginRight="110dp"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textSize="15sp"
+        />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
         android:id="@+id/addButton"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="255dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="240dp"
+        android:textSize="18sp"
+        android:textColor="#FF0000"
         />
 
     <TextView
@@ -46,7 +51,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/numberEmployee"
         android:layout_marginTop="116dp"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="170dp"
         android:textSize="18sp"
         android:textColor="#FFFFFF"
         />
@@ -68,7 +73,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/averageNumber"
         android:layout_marginTop="181dp"
-        android:layout_marginLeft="150dp"
+        android:layout_marginLeft="170dp"
         android:textSize="18sp"
         android:textColor="#FFFFFF"
         />
@@ -82,25 +87,31 @@
         android:id="@+id/findEmployee"
         android:layout_marginTop="240dp"
         android:layout_marginRight="110dp"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textSize="15sp"
+        />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Find"
         android:id="@+id/findButton"
-        android:layout_marginTop="240dp"
-        android:layout_marginLeft="255dp"
+        android:layout_marginTop="253dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginRight="10dp"
+        android:textSize="18sp"
+        android:textColor="#FF0000"
         />
 
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Switch"
+        android:text="Covert To Spanish "
         android:id="@+id/switch1"
         android:layout_marginTop="69dp"
         android:layout_below="@+id/findButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
 
 
 </RelativeLayout>

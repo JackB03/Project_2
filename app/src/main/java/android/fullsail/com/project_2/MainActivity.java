@@ -2,6 +2,7 @@ package android.fullsail.com.project_2;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.preference.DialogPreference;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -57,8 +58,10 @@ public class MainActivity extends AppCompatActivity {
         averageLength.setText("0");
 
         // Add & Find BUTTON SETUP
-        Button theAddButon = (Button) findViewById(R.id.addButton);
-        Button theFindButton = (Button) findViewById(R.id.findButton);
+        TextView theAddButon = (TextView) findViewById(R.id.addButton);
+        theAddButon.setBackgroundColor(Color.rgb(255, 221, 0));
+        TextView theFindButton = (TextView) findViewById(R.id.findButton);
+        theFindButton.setBackgroundColor(Color.rgb(255, 221, 0));
 
 
         // Alert - USER INFORMATION - Add Employee
@@ -113,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 // Verifying User Text has been added.
                 for (String test : employeeArray )
                     Log.i(TAG,test.toString());
-                
+
 
                 // TOAST to show added Employee
                 Toast.makeText(MainActivity.this, "Employee " + currentTextLbl.getText().toString().toUpperCase() + " is added to your list.", Toast.LENGTH_LONG).show();
@@ -154,28 +157,28 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     final TextView currentTextLblSpanish = (TextView) findViewById(R.id.currentText);
-                    Button theAddButonSpanish = (Button) findViewById(R.id.addButton);
+                    TextView theAddButonSpanish = (TextView) findViewById(R.id.addButton);
                     TextView employeeTextSpanish = (TextView) findViewById(R.id.employeeLbl);
                     TextView averageLengthSpanish = (TextView) findViewById(R.id.averageLbl);
                     EditText findTextSpanish = (EditText) findViewById(R.id.findEmployee);
-                    Button theFindButtonSpanish = (Button) findViewById(R.id.findButton);
+                    TextView theFindButtonSpanish = (TextView) findViewById(R.id.findButton);
 
 
-                    currentTextLblSpanish.setText("Habla");
-                    theAddButonSpanish.setText("Habla");
-                    employeeTextSpanish.setText("Habla:");
-                    averageLengthSpanish.setText("Habla:");
-                    findTextSpanish.setText("Habla");
-                    theFindButtonSpanish.setText("Habla");
+                    currentTextLblSpanish.setText("Añadir Nombre del Empleado");
+                    theAddButonSpanish.setText("Añadir");
+                    employeeTextSpanish.setText("Empleados:");
+                    averageLengthSpanish.setText("Longitud Promedio:");
+                    findTextSpanish.setText("Encuentra Empleado");
+                    theFindButtonSpanish.setText("Encontrar");
 
 
                 } else {
                     final TextView currentTextLbl = (TextView) findViewById(R.id.currentText);
-                    Button theAddButon = (Button) findViewById(R.id.addButton);
+                    TextView theAddButon = (TextView) findViewById(R.id.addButton);
                     TextView employeeText = (TextView) findViewById(R.id.employeeLbl);
                     TextView averageLength = (TextView) findViewById(R.id.averageLbl);
                     EditText findText = (EditText) findViewById(R.id.findEmployee);
-                    Button theFindButton = (Button) findViewById(R.id.findButton);
+                    TextView theFindButton = (TextView) findViewById(R.id.findButton);
 
 
                     currentTextLbl.setText("Add Employee Name");
