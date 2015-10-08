@@ -14,6 +14,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -112,12 +113,13 @@ public class MainActivity extends AppCompatActivity {
                 // Verifying User Text has been added.
                 for (String test : employeeArray )
                     Log.i(TAG,test.toString());
+                
 
                 // TOAST to show added Employee
+                Toast.makeText(MainActivity.this, "Employee " + currentTextLbl.getText().toString().toUpperCase() + " is added to your list.", Toast.LENGTH_LONG).show();
 
             }
         });
-
 
         theFindButton.setOnClickListener(new View.OnClickListener() {
             @Override
