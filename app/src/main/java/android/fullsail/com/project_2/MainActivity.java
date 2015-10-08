@@ -10,7 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -111,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
                 for (String test : employeeArray )
                     Log.i(TAG,test.toString());
 
+                // TOAST to show added Employee
+
             }
         });
 
@@ -140,7 +144,48 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // SWITCH Setup
+        // SWITCH Setup - English to Spanish
+        Switch switchBtn = (Switch) findViewById(R.id.switch1);
+
+        switchBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    final TextView currentTextLblSpanish = (TextView) findViewById(R.id.currentText);
+                    Button theAddButonSpanish = (Button) findViewById(R.id.addButton);
+                    TextView employeeTextSpanish = (TextView) findViewById(R.id.employeeLbl);
+                    TextView averageLengthSpanish = (TextView) findViewById(R.id.averageLbl);
+                    EditText findTextSpanish = (EditText) findViewById(R.id.findEmployee);
+                    Button theFindButtonSpanish = (Button) findViewById(R.id.findButton);
+
+
+                    currentTextLblSpanish.setText("Habla");
+                    theAddButonSpanish.setText("Habla");
+                    employeeTextSpanish.setText("Habla:");
+                    averageLengthSpanish.setText("Habla:");
+                    findTextSpanish.setText("Habla");
+                    theFindButtonSpanish.setText("Habla");
+
+
+                } else {
+                    final TextView currentTextLbl = (TextView) findViewById(R.id.currentText);
+                    Button theAddButon = (Button) findViewById(R.id.addButton);
+                    TextView employeeText = (TextView) findViewById(R.id.employeeLbl);
+                    TextView averageLength = (TextView) findViewById(R.id.averageLbl);
+                    EditText findText = (EditText) findViewById(R.id.findEmployee);
+                    Button theFindButton = (Button) findViewById(R.id.findButton);
+
+
+                    currentTextLbl.setText("Add Employee Name");
+                    theAddButon.setText("Add");
+                    employeeText.setText("Employees:");
+                    averageLength.setText("Average Length:");
+                    findText.setText("Find Employee");
+                    theFindButton.setText("Find");
+
+                }
+            }
+        });
 
 
 
